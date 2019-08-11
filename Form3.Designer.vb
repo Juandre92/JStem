@@ -29,6 +29,9 @@ Partial Class Form3
         Me.AthleteInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RaceResultToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AthleticEventToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -79,11 +82,41 @@ Partial Class Form3
         Me.AthleticEventToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AthleticEventToolStripMenuItem.Text = "Athletic Event"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(40, 310)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Add"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(121, 310)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Edit"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(202, 310)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 3
+        Me.Button3.Text = "Delete"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(788, 444)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form3"
@@ -102,4 +135,7 @@ Partial Class Form3
     Friend WithEvents AthleteInfoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RaceResultToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AthleticEventToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class
