@@ -14,4 +14,10 @@
         Form3.Show()
 
     End Sub
+
+    Private Sub AthleteInfoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AthleteInfoToolStripMenuItem.Click
+
+
+
+    End Sub
 End Class
