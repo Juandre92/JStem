@@ -30,11 +30,11 @@ Partial Class Form1
         Me.RaceResultToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AthleticEventToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtMemberNumber = New System.Windows.Forms.TextBox()
+        Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtSurname = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -44,9 +44,9 @@ Partial Class Form1
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -107,19 +107,19 @@ Partial Class Form1
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Membership Number:"
         '
-        'TextBox1
+        'txtMemberNumber
         '
-        Me.TextBox1.Location = New System.Drawing.Point(16, 82)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.txtMemberNumber.Location = New System.Drawing.Point(16, 82)
+        Me.txtMemberNumber.Name = "txtMemberNumber"
+        Me.txtMemberNumber.Size = New System.Drawing.Size(100, 20)
+        Me.txtMemberNumber.TabIndex = 2
         '
-        'TextBox2
+        'txtName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(16, 125)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.txtName.Location = New System.Drawing.Point(16, 125)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(100, 20)
+        Me.txtName.TabIndex = 3
         '
         'Label2
         '
@@ -139,12 +139,12 @@ Partial Class Form1
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Surname:"
         '
-        'TextBox3
+        'txtSurname
         '
-        Me.TextBox3.Location = New System.Drawing.Point(122, 125)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 6
+        Me.txtSurname.Location = New System.Drawing.Point(122, 125)
+        Me.txtSurname.Name = "txtSurname"
+        Me.txtSurname.Size = New System.Drawing.Size(100, 20)
+        Me.txtSurname.TabIndex = 6
         '
         'Label4
         '
@@ -229,41 +229,41 @@ Partial Class Form1
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "Races competed in:"
         '
-        'Button1
+        'btnAdd
         '
-        Me.Button1.Location = New System.Drawing.Point(16, 315)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Add"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAdd.Location = New System.Drawing.Point(16, 315)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.TabIndex = 15
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnEdit
         '
-        Me.Button2.Location = New System.Drawing.Point(97, 315)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Edit"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnEdit.Location = New System.Drawing.Point(97, 315)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(75, 23)
+        Me.btnEdit.TabIndex = 16
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnDelete
         '
-        Me.Button3.Location = New System.Drawing.Point(179, 315)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 17
-        Me.Button3.Text = "Delete"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnDelete.Location = New System.Drawing.Point(179, 315)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.btnDelete.TabIndex = 17
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(691, 437)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.CheckedListBox1)
         Me.Controls.Add(Me.DateTimePicker2)
@@ -271,11 +271,11 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtSurname)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtName)
+        Me.Controls.Add(Me.txtMemberNumber)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -298,11 +298,11 @@ Partial Class Form1
     Friend WithEvents RaceResultToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AthleticEventToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtMemberNumber As TextBox
+    Friend WithEvents txtName As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtSurname As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents GroupBox1 As GroupBox
@@ -312,7 +312,7 @@ Partial Class Form1
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents CheckedListBox1 As CheckedListBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnEdit As Button
+    Friend WithEvents btnDelete As Button
 End Class
