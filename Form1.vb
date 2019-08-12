@@ -22,7 +22,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        My.Computer.FileSystem.WriteAllText("C:\Users\stemm\Desktop\ICT3611\53951514_A1_S2_2019\TextFile1.txt", "" & txtMemberNumber.Text, True, & txtName.Text, True)
+
 
     End Sub
 
