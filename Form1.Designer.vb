@@ -38,8 +38,8 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.Female = New System.Windows.Forms.RadioButton()
+        Me.Male = New System.Windows.Forms.RadioButton()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
@@ -47,8 +47,15 @@ Partial Class Form1
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -56,7 +63,7 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.FormsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(691, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1132, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -70,7 +77,7 @@ Partial Class Form1
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(93, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'FormsToolStripMenuItem
@@ -83,19 +90,19 @@ Partial Class Form1
         'AthleteInfoToolStripMenuItem
         '
         Me.AthleteInfoToolStripMenuItem.Name = "AthleteInfoToolStripMenuItem"
-        Me.AthleteInfoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AthleteInfoToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.AthleteInfoToolStripMenuItem.Text = "Athlete Info"
         '
         'RaceResultToolStripMenuItem
         '
         Me.RaceResultToolStripMenuItem.Name = "RaceResultToolStripMenuItem"
-        Me.RaceResultToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RaceResultToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.RaceResultToolStripMenuItem.Text = "Race Result"
         '
         'AthleticEventToolStripMenuItem
         '
         Me.AthleticEventToolStripMenuItem.Name = "AthleticEventToolStripMenuItem"
-        Me.AthleticEventToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AthleticEventToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.AthleticEventToolStripMenuItem.Text = "Athletic Event"
         '
         'Label1
@@ -164,8 +171,8 @@ Partial Class Form1
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Controls.Add(Me.Female)
+        Me.GroupBox1.Controls.Add(Me.Male)
         Me.GroupBox1.Location = New System.Drawing.Point(257, 65)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(200, 100)
@@ -173,27 +180,27 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Gender:"
         '
-        'RadioButton1
+        'Female
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(7, 20)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(48, 17)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Male"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.Female.AutoSize = True
+        Me.Female.Location = New System.Drawing.Point(7, 44)
+        Me.Female.Name = "Female"
+        Me.Female.Size = New System.Drawing.Size(59, 17)
+        Me.Female.TabIndex = 1
+        Me.Female.TabStop = True
+        Me.Female.Text = "Female"
+        Me.Female.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'Male
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(7, 44)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(59, 17)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Female"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.Male.AutoSize = True
+        Me.Male.Location = New System.Drawing.Point(7, 20)
+        Me.Male.Name = "Male"
+        Me.Male.Size = New System.Drawing.Size(48, 17)
+        Me.Male.TabIndex = 0
+        Me.Male.TabStop = True
+        Me.Male.Text = "Male"
+        Me.Male.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -256,11 +263,46 @@ Partial Class Form1
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 354)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(693, 150)
+        Me.DataGridView1.TabIndex = 18
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "MemberID"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Name"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Surname"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "DateOfBirth"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Gender"
+        Me.Column5.Name = "Column5"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(691, 437)
+        Me.ClientSize = New System.Drawing.Size(1132, 528)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnAdd)
@@ -285,6 +327,7 @@ Partial Class Form1
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -306,8 +349,8 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents Female As RadioButton
+    Friend WithEvents Male As RadioButton
     Friend WithEvents Label5 As Label
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents CheckedListBox1 As CheckedListBox
@@ -315,4 +358,10 @@ Partial Class Form1
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnEdit As Button
     Friend WithEvents btnDelete As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
 End Class

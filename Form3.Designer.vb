@@ -22,6 +22,7 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -32,7 +33,18 @@ Partial Class Form3
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.AthletesDataSet = New _53951514_A1_S2_2019.AthletesDataSet()
+        Me.AthletesDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AthletesDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AthletesDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -54,7 +66,7 @@ Partial Class Form3
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(93, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'FormsToolStripMenuItem
@@ -67,19 +79,19 @@ Partial Class Form3
         'AthleteInfoToolStripMenuItem
         '
         Me.AthleteInfoToolStripMenuItem.Name = "AthleteInfoToolStripMenuItem"
-        Me.AthleteInfoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AthleteInfoToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.AthleteInfoToolStripMenuItem.Text = "Athlete Info"
         '
         'RaceResultToolStripMenuItem
         '
         Me.RaceResultToolStripMenuItem.Name = "RaceResultToolStripMenuItem"
-        Me.RaceResultToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RaceResultToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.RaceResultToolStripMenuItem.Text = "Race Result"
         '
         'AthleticEventToolStripMenuItem
         '
         Me.AthleticEventToolStripMenuItem.Name = "AthleticEventToolStripMenuItem"
-        Me.AthleticEventToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AthleticEventToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.AthleticEventToolStripMenuItem.Text = "Athletic Event"
         '
         'Button1
@@ -109,11 +121,58 @@ Partial Class Form3
         Me.Button3.Text = "Delete"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
+        Me.DataGridView1.DataSource = Me.AthletesDataSetBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(70, 73)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(693, 150)
+        Me.DataGridView1.TabIndex = 4
+        '
+        'AthletesDataSet
+        '
+        Me.AthletesDataSet.DataSetName = "AthletesDataSet"
+        Me.AthletesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AthletesDataSetBindingSource
+        '
+        Me.AthletesDataSetBindingSource.DataSource = Me.AthletesDataSet
+        Me.AthletesDataSetBindingSource.Position = 0
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "MemberID"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Name"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Surname"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "DateOfBirth"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Gender"
+        Me.Column5.Name = "Column5"
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(788, 444)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -123,6 +182,9 @@ Partial Class Form3
         Me.Text = "Athletic Event"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AthletesDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AthletesDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -138,4 +200,12 @@ Partial Class Form3
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents AthletesDataSetBindingSource As BindingSource
+    Friend WithEvents AthletesDataSet As AthletesDataSet
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
 End Class
