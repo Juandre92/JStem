@@ -25,6 +25,27 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
+        If txtMemberNumber.Text = "" Then
+            MessageBox.Show("You must enter a number")
+        ElseIf IsNumeric(txtMemberNumber.Text) Then
+            MessageBox.Show("You entered a number")
+        Else
+            MessageBox.Show("You entered a string")
+
+
+        End If
+
+
+        'writing data to txt file
+
+        Dim writer As TextWriter = New StreamWriter("C:\Users\stemm\Desktop\ICT3611\53951514_A1_S2_2019\53951514_A1_S2_2019\Athlete.txt")
+
+        writer.Write((txtMemberNumber.Text & " ") & (txtName.Text & " ") & (txtSurname.Text & " ") & (DateTimePicker1.Text.ToString & " ") & (Male.Text))
+
+        writer.Close()
+
+        MessageBox.Show("Exported")
+
         'adding data to gridview
 
 
